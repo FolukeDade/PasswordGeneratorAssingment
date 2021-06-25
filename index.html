@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Fancy Password Generator</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-    
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Password Generator</title>
+</head>
+<body>
+  <input type="number" min="5" max="30" value="5" id="number">
+  <input type="text" placeholder="password" id="password" readonly>
+  <button id="button">Generate Password</button>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Fancy Password Generator</a>
-    </nav>
-    <div class="container">
+  <script>
+    const numberOfCharaters = document.getElementById("number");
+    const holder = document.getElementById("password");
+    const button = document.getElementById("button");
 
-      <div class="row">
+    function generatePassword(){
 
-        <div class="col-lg-8 col-sm-12 mx-auto">
+      const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890~!@#$%^&*()_+"
+      const passwordLength = numberOfCharacter.value
+      let password = ""
+      
+      for(let i = 0; i < passwordLength; i++){
+        let randomPassword = Math.floor(Math.random() * charaters.length)
+        password += characters.substring(randomPassword, randomPassword + 1)
+      }
+      holder.value = password
+    }
 
-          <div class ="content">
-
-          </div>
-        </div>
-
-      </div>
-      <header>
-        <h3>Fancy Password Generator</h3>
-        <br />
-        <input type="text" id="display">
-        <br />
-        <input type="range" min="0" max="30" name="slider" id="slider">
-        <br />
-        <button onclick="generate()">Generate</button>
-        <button onclick="copypassword()">Copy to Clipboard</button>
-        <div id="length"></div>
-
-        <div class="previous_passwords"></div>
-        <b>Previously Generated Passwords</b>
-        <br />
-        <div id="lastPasswords"></div>
-      </header>
-       
-      <script src="script.js"></script>
-  </body>
+  </script>
+</body>
 </html>
