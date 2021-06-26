@@ -11,13 +11,15 @@
 </head>
 <body>
 <div class="container">
-  <h1> Fancy Password Generator</h1>
-  <h3>Password</h3>
-  <form>
+  <h1 class="title"> Fancy Password Generator</h1>
+  <h3 class="password-display">Password</h3>
+  <form class="form">
     <label for="charaterAmountNumber"> Number of Charaters</label>
-    <input type="range" min="1" max="50" value="10" id="charaterAmountRange">
-    <input type="number"min="1" max="50" value="10" id="charaterAmountNumber">
-
+    <div class="character-amount-container">
+      <input type="range" min="1" max="50" value="10" id="charaterAmountRange">
+    <input class="number-input" type="number"min="1" max="50" value="10" id="charaterAmountNumber">
+    </div>
+    
     <label for="">Include Uppercase</label>
     <input type="checkbox" id="includeUpperCase">
 
@@ -27,7 +29,7 @@
     <label for="">Include Symbols</label>
     <input type="checkbox" id="includeSymbols">
 
-    <button type="submit">Generate Password</button>
+    <button type="submit" class="btn">Generate Password</button>
 
   </form>
 </div>
