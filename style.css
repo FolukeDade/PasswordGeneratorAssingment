@@ -1,8 +1,20 @@
  body {
-   background-color: black;
-   color: antiquewhite;
+   background-color: grey;
+   color: black;
    min-height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
- }
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+
+   .container { 
+     background-color: rgb(255, 127, 244);
+     padding: 3rem;
+     border-radius: 1rem;
+     border: 2px solid black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
